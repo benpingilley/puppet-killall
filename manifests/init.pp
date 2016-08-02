@@ -57,8 +57,8 @@ class killall($ensure='running',
     }
     'RedHat': {
       $supported  = true
-      $pkg_name   = 'killall'
-      $svc_name   = 'killall'
+      $pkg_name   = 'psmisc'
+      $svc_name   = 'psmisc'
     }
 
     'Linux': {
