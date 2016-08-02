@@ -52,19 +52,19 @@ class killall($ensure='running',
   case $::osfamily {
     'Debian': {
       $supported  = true
-      $pkg_name   = [ 'psmisc' ]
+      $pkg_name   = 'psmisc'
       $svc_name   = 'psmisc'
     }
     'RedHat': {
       $supported  = true
-      $pkg_name   = [ 'killall' ]
+      $pkg_name   = 'killall'
       $svc_name   = 'killall'
     }
 
     'Linux': {
       if ($::operatingsystem == 'Archlinux') {
         $supported = true
-        $pkg_name = ['killall']
+        $pkg_name = 'killall'
         $svc_name = 'killall'
       } else {
         fail("The ${module_name} module is not supported on an ${::operatingsystem} system")
